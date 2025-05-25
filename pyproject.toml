@@ -28,6 +28,7 @@ fastapi = "^0.115.6"
 uvicorn = "^0.34.0"
 langchain_unstructured = ">0.0.10"
 unstructured = {extras = ["docx", "pdf", "pptx"], version = "^0.17.2"}
+langgraph-cli = {extras = ["inmem"], version = "^0.2.10"}
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.0.0"

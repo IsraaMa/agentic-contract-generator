@@ -8,6 +8,7 @@ import os
 
 @traceable(name="Contract Generator")
 def contract_generator(state: ContractState) -> ContractState:
+    print("[IN][contract_generator] Generating contract with retrieved data...")
     # Load vectorstore
     VECTORSTORE_DIR = os.path.join(os.path.dirname(__file__), '../../vectorstore/faiss_index')
     embeddings = OpenAIEmbeddings()
@@ -42,4 +43,5 @@ def contract_generator(state: ContractState) -> ContractState:
     """
     result = chain.invoke({"query": prompt})
     state.final_contract = result["result"]
+    print("[OUT][contract_generator] Contract generated.")
     return state 

@@ -4,7 +4,7 @@
       "."
     ],
     "graphs": {
-      "main": "./ldaa/agents/graph.py:graph"
+      "main": "./cag/agents/graph.py:graph"
     },
     "store": {
       "index": {

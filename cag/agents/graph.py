@@ -5,6 +5,7 @@ from langgraph.graph import END, StateGraph
 from langsmith import traceable  # For LangSmith tracing
 from cag.schemas import ContractState
 from functools import partial
+from langgraph.checkpoint.memory import InMemorySaver
 
 from cag.agents.contract_capture import contract_capture
 from cag.agents.contract_generator import contract_generator
@@ -88,4 +89,5 @@ graph.add_edge("human_review_quality", "contract_generator")
 graph.add_edge("contract_generator", END)
 
 # Compile the graph
-app = graph.compile()
+checkpointer = InMemorySaver()
+app = graph.compile(checkpointer=checkpointer)

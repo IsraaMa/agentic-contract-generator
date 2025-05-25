@@ -3,6 +3,7 @@ from cag.schemas import ContractState
 
 @traceable(name="Contract Capture")
 def contract_capture(state: ContractState) -> ContractState:
+    print("[IN][contract_capture] Starting contract capture validation...")
     required_fields = {
         "datos_trabajador": [
             "nombre_completo", "nacionalidad", "edad", "sexo", "estado_civil", "curp", "rfc", "domicilio"
@@ -26,6 +27,8 @@ def contract_capture(state: ContractState) -> ContractState:
     if errors:
         state.format_valid = False
         state.final_contract = "Error de captura de contrato:\n" + "\n".join(errors)
+        print(f"[OUT][contract_capture] Validation failed: {errors}")
     else:
         state.format_valid = True
+        print("[OUT][contract_capture] Validation passed.")
     return state 

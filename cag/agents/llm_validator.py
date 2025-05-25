@@ -9,6 +9,7 @@ def llm_validator(state: ContractState, stage: str) -> ContractState:
     Generic LLM-based validator for any stage.
     - stage: one of 'format', 'legal', 'structure', 'quality'
     """
+    print(f"[IN][llm_validator] Validating stage: {stage}...")
     if stage == "quality":
         field = "quality_approved"
         prompt = (
@@ -28,4 +29,5 @@ def llm_validator(state: ContractState, stage: str) -> ContractState:
     response = llm.invoke(prompt)
     result = json.loads(response.content)
     setattr(state, field, result.get(field, False))
+    print(f"[OUT][llm_validator] Validation result for {stage}: {getattr(state, field)}")
     return state 
