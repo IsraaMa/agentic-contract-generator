@@ -1,0 +1,44 @@
+[
+  {
+    "descripción": "Servicios de consultoría TI.",
+    "datos_prestador_servicios": {
+      "nombre_o_razon_social": "Soluciones TI Integrales",
+      "curp_o_rfc": "STI890202XXX",
+      "domicilio": "Av. Tecnológico 120, Puebla"
+    },
+    "datos_contratante": {
+      "nombre_o_razon_social": "Empresa Alfa S.A. de C.V.",
+      "curp_o_rfc": "EAL900303XXX",
+      "domicilio": "Av. Revolución 600, CDMX"
+    },
+    "condiciones_servicio": {
+      "descripcion_servicios": "Implementación de infraestructura cloud.",
+      "plazo_entrega": "3 meses",
+      "honorarios": 150000,
+      "forma_pago": "Transferencia",
+      "lugar_pago": "Cuenta bancaria contratante",
+      "cronograma": "Entrega de planes trimestral"
+    }
+  },
+  {
+    "descripción": "Desarrollo de sitio web corporativo.",
+    "datos_prestador_servicios": {
+      "nombre_o_razon_social": "Web Innovators",
+      "curp_o_rfc": "WIN920808XXX",
+      "domicilio": "Calle Lázaro Cárdenas 45, Monterrey"
+    },
+    "datos_contratante": {
+      "nombre_o_razon_social": "Startup Beta",
+      "curp_o_rfc": "SBX950909XXX",
+      "domicilio": "Av. Constitución 100, Monterrey"
+    },
+    "condiciones_servicio": {
+      "descripcion_servicios": "Diseño y desarrollo web responsive.",
+      "plazo_entrega": "2 meses",
+      "honorarios": 80000,
+      "forma_pago": "50% al inicio, 50% al terminar",
+      "lugar_pago": "Cuenta bancaria prestador",
+      "cronograma": "Revisiones semanales"
+    }
+  }
+]
