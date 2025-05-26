@@ -1,20 +1,34 @@
 from langsmith import traceable
 from cag.schemas import ContractState
+import json
+import os
 
 @traceable(name="Contract Capture")
 def contract_capture(state: ContractState) -> ContractState:
     print("[IN][contract_capture] Starting contract capture validation...")
-    required_fields = {
-        "datos_trabajador": [
-            "nombre_completo", "nacionalidad", "edad", "sexo", "estado_civil", "curp", "rfc", "domicilio"
-        ],
-        "datos_patron": [
-            "razon_social", "rfc", "domicilio", "representante_legal"
-        ],
-        "condiciones_trabajo": [
-            "tipo_contrato", "puesto", "funciones", "lugar_trabajo", "jornada_laboral", "horario", "salario_mensual", "forma_pago", "dia_lugar_pago", "periodo_prueba_dias", "capacitacion"
-        ]
-    }
+    
+    # Cargar el archivo de campos requeridos
+    contract_types_path = os.path.join(os.path.dirname(__file__), '../contract_types/contract_required_fields.json')
+    with open(contract_types_path, 'r', encoding='utf-8') as f:
+        contract_types = json.load(f)
+    
+    # Obtener el tipo de contrato del input_data
+    contract_type = state.input_data.get("contract_type")
+    if not contract_type:
+        state.format_valid = False
+        state.final_contract = "Error: No se especificó el tipo de contrato en los datos de entrada."
+        print(f"[OUT][contract_capture] Validation failed: Tipo de contrato no especificado")
+        return state
+    
+    # Obtener los campos requeridos para el tipo de contrato
+    if contract_type not in contract_types:
+        state.format_valid = False
+        state.final_contract = f"Error: Tipo de contrato '{contract_type}' no encontrado en la lista de tipos disponibles."
+        print(f"[OUT][contract_capture] Validation failed: Tipo de contrato no encontrado")
+        return state
+    
+    required_fields = contract_types[contract_type]["datos_requeridos"]
+    
     errors = []
     data = state.input_data
     for section, fields in required_fields.items():
@@ -24,6 +38,7 @@ def contract_capture(state: ContractState) -> ContractState:
         for field in fields:
             if field not in data[section]:
                 errors.append(f"Falta el campo obligatorio: {section}.{field}")
+    
     if errors:
         state.format_valid = False
         state.final_contract = "Error de captura de contrato:\n" + "\n".join(errors)
@@ -31,4 +46,5 @@ def contract_capture(state: ContractState) -> ContractState:
     else:
         state.format_valid = True
         print("[OUT][contract_capture] Validation passed.")
+    
     return state 

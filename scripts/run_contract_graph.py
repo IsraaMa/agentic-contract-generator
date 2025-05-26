@@ -24,12 +24,19 @@ def main():
     if len(sys.argv) < 2:
         print("Usage: python run_contract_graph.py <input_data.json>")
         sys.exit(1)
+    
     input_path = sys.argv[1]
+    
     if not os.path.exists(input_path):
         print(f"Input file not found: {input_path}")
         sys.exit(1)
+    
     with open(input_path, 'r', encoding='utf-8') as f:
         input_data = json.load(f)
+    
+    if "contract_type" not in input_data:
+        print("Error: El archivo de entrada debe contener el campo 'contract_type'")
+        sys.exit(1)
 
     # ContractState expects input_data as a dict
     state = ContractState(input_data=input_data)
