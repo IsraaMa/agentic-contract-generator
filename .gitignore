@@ -81,8 +81,8 @@ Thumbs.db
 Desktop.ini
 
 # Ignore exported PDFs and generated files
-*.pdf
-*.docx
+#*.pdf
+#*.docx
 *.pptx
 *.xlsx
 *.csv 
