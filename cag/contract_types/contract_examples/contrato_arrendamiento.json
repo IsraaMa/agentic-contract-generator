@@ -1,0 +1,48 @@
+[
+  {
+    "descripción": "Arrendamiento de vivienda en CDMX.",
+    "datos_arrendador": {
+      "nombre_o_razon_social": "Inmuebles CDMX S.A. de C.V.",
+      "curp_o_rfc": "ICD921231XXX",
+      "domicilio": "Av. Insurgentes Sur 1500, CDMX"
+    },
+    "datos_arrendatario": {
+      "nombre_completo": "Laura Sofía Méndez",
+      "curp_o_rfc": "MEML900628MDFNDR02",
+      "domicilio": "Calle Lirio 23, CDMX"
+    },
+    "detalles_inmueble": {
+      "direccion": "Calle Lirio 23, Col. Del Valle, CDMX",
+      "descripcion_inmueble": "Departamento 2 recámaras, 1 baño",
+      "uso": "Vivienda",
+      "renta_mensual": 12000,
+      "deposito_garantia": 12000,
+      "plazo_contrato_meses": 12,
+      "fecha_inicio": "2025-06-01",
+      "fecha_termino": "2026-05-31"
+    }
+  },
+  {
+    "descripción": "Arrendamiento de oficina en Guadalajara.",
+    "datos_arrendador": {
+      "nombre_o_razon_social": "Espacios Corporativos GDL",
+      "curp_o_rfc": "ECG930715XXX",
+      "domicilio": "Av. Vallarta 5000, Guadalajara, Jalisco"
+    },
+    "datos_arrendatario": {
+      "nombre_completo": "Agencia Creativa MX",
+      "curp_o_rfc": "ACMX950101XXX",
+      "domicilio": "Av. Chapultepec 800, Guadalajara"
+    },
+    "detalles_inmueble": {
+      "direccion": "Av. Vallarta 5000, Piso 5, GDL",
+      "descripcion_inmueble": "Oficina de 50m²",
+      "uso": "Comercial",
+      "renta_mensual": 20000,
+      "deposito_garantia": 20000,
+      "plazo_contrato_meses": 6,
+      "fecha_inicio": "2025-07-01",
+      "fecha_termino": "2025-12-31"
+    }
+  }
+]

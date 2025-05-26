@@ -1,0 +1,174 @@
+{
+  "Contrato Laboral por Tiempo Indeterminado": {
+    "descripción": "Es el contrato más utilizado en México. Establece una relación laboral sin una fecha de finalización específica, brindando estabilidad al trabajador y acceso a prestaciones como aguinaldo, vacaciones y seguridad social. Este tipo de contrato se considera la regla general según la Ley Federal del Trabajo.",
+    "datos_requeridos": {
+      "datos_trabajador": [
+        "nombre_completo",
+        "nacionalidad",
+        "edad",
+        "sexo",
+        "estado_civil",
+        "curp",
+        "rfc",
+        "domicilio"
+      ],
+      "datos_patron": [
+        "razon_social",
+        "rfc",
+        "domicilio",
+        "representante_legal"
+      ],
+      "condiciones_trabajo": [
+        "tipo_contrato",
+        "puesto",
+        "funciones",
+        "lugar_trabajo",
+        "jornada_laboral",
+        "horario",
+        "salario_mensual",
+        "forma_pago",
+        "dia_lugar_pago",
+        "periodo_prueba_dias",
+        "capacitacion"
+      ]
+    }
+  },
+  "Contrato de Compraventa": {
+    "descripción": "Utilizado para formalizar la transferencia de bienes, ya sean muebles o inmuebles. Es especialmente común en transacciones inmobiliarias, donde se detallan las condiciones de la venta, el precio y las obligaciones de ambas partes.",
+    "datos_requeridos": {
+      "datos_vendedor": [
+        "nombre_o_razon_social",
+        "nacionalidad",
+        "curp_o_rfc",
+        "domicilio"
+      ],
+      "datos_comprador": [
+        "nombre_o_razon_social",
+        "nacionalidad",
+        "curp_o_rfc",
+        "domicilio"
+      ],
+      "detalles_bien": [
+        "tipo_bien",
+        "descripcion",
+        "ubicacion",
+        "valor",
+        "forma_pago",
+        "plazo_pago"
+      ]
+    }
+  },
+  "Contrato de Arrendamiento": {
+    "descripción": "Este contrato permite a una persona (arrendatario) utilizar un bien propiedad de otra (arrendador) a cambio de una renta. Es ampliamente utilizado en el sector inmobiliario para el alquiler de viviendas, oficinas y locales comerciales.",
+    "datos_requeridos": {
+      "datos_arrendador": [
+        "nombre_o_razon_social",
+        "curp_o_rfc",
+        "domicilio"
+      ],
+      "datos_arrendatario": [
+        "nombre_completo",
+        "curp_o_rfc",
+        "domicilio"
+      ],
+      "detalles_inmueble": [
+        "direccion",
+        "descripcion_inmueble",
+        "uso",
+        "renta_mensual",
+        "deposito_garantia",
+        "plazo_contrato_meses",
+        "fecha_inicio",
+        "fecha_termino"
+      ]
+    }
+  },
+  "Contrato de Prestación de Servicios": {
+    "descripción": "Se celebra cuando una persona o empresa se compromete a realizar ciertos servicios para otra parte a cambio de una compensación. A diferencia del contrato laboral, no implica una relación de subordinación, y es común en trabajos freelance o consultorías.",
+    "datos_requeridos": {
+      "datos_prestador_servicios": [
+        "nombre_o_razon_social",
+        "curp_o_rfc",
+        "domicilio"
+      ],
+      "datos_contratante": [
+        "nombre_o_razon_social",
+        "curp_o_rfc",
+        "domicilio"
+      ],
+      "condiciones_servicio": [
+        "descripcion_servicios",
+        "plazo_entrega",
+        "honorarios",
+        "forma_pago",
+        "lugar_pago",
+        "cronograma"
+      ]
+    }
+  },
+  "Contrato de Confidencialidad (NDA)": {
+    "descripción": "Utilizado para proteger información sensible compartida entre partes, evitando su divulgación a terceros. Es común en negociaciones comerciales, desarrollos tecnológicos y asociaciones estratégicas.",
+    "datos_requeridos": {
+      "parte_divulgadora": [
+        "nombre_o_razon_social",
+        "curp_o_rfc",
+        "domicilio"
+      ],
+      "parte_receptora": [
+        "nombre_o_razon_social",
+        "curp_o_rfc",
+        "domicilio"
+      ],
+      "detalles_confidencialidad": [
+        "definicion_informacion_confidencial",
+        "plazo_confidencialidad_meses",
+        "excepciones"
+      ]
+    }
+  },
+  "Contrato de Franquicia": {
+    "descripción": "Permite a una persona o empresa utilizar la marca y modelo de negocio de otra, a cambio de regalías o pagos periódicos. Es una herramienta clave para la expansión de negocios y es común en sectores como la restauración y el comercio minorista.",
+    "datos_requeridos": {
+      "datos_franquiciante": [
+        "nombre_o_razon_social",
+        "rfc",
+        "domicilio"
+      ],
+      "datos_franquiciado": [
+        "nombre_o_razon_social",
+        "rfc",
+        "domicilio"
+      ],
+      "condiciones_franquicia": [
+        "derechos_marca",
+        "regalias_porcentaje",
+        "canon_inicial",
+        "territorio",
+        "duracion_contrato_meses",
+        "soporte_y_capacitacion"
+      ]
+    }
+  },
+  "Contrato de Comisión Mercantil": {
+    "descripción": "Establece que una persona (comisionista) realiza actos de comercio por cuenta de otra (comitente), a cambio de una comisión. Es común en actividades de ventas y representación comercial.",
+    "datos_requeridos": {
+      "datos_comitente": [
+        "nombre_o_razon_social",
+        "rfc",
+        "domicilio"
+      ],
+      "datos_comisionista": [
+        "nombre_completo",
+        "curp",
+        "rfc",
+        "domicilio"
+      ],
+      "condiciones_comision": [
+        "actividad_objeto",
+        "porcentaje_comision",
+        "plazo_actividades_meses",
+        "territorio"
+      ]
+    }
+  }
+}

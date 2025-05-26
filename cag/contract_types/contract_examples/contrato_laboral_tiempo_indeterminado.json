@@ -1,0 +1,66 @@
+[
+  {
+    "descripción": "Contrato por tiempo indeterminado entre trabajador y empleador.",
+    "datos_trabajador": {
+      "nombre_completo": "Ana María López Ramos",
+      "nacionalidad": "Mexicana",
+      "edad": 28,
+      "sexo": "Femenino",
+      "estado_civil": "Casada",
+      "curp": "LORAnm850212MDFLPS06",
+      "rfc": "LOR850212XXX",
+      "domicilio": "Av. Reforma 123, Ciudad de México"
+    },
+    "datos_patron": {
+      "razon_social": "Tech Solutions S.A. de C.V.",
+      "rfc": "TSO900501XXX",
+      "domicilio": "Calle Tecnológico 45, Guadalajara, Jalisco",
+      "representante_legal": "Carlos García Martínez"
+    },
+    "condiciones_trabajo": {
+      "tipo_contrato": "Indeterminado",
+      "puesto": "Analista de Datos",
+      "funciones": "Análisis y reporte de datos empresariales.",
+      "lugar_trabajo": "Oficina",
+      "jornada_laboral": "Tiempo completo",
+      "horario": "8:00 a 17:00",
+      "salario_mensual": 35000,
+      "forma_pago": "Transferencia bancaria",
+      "dia_lugar_pago": "Último día hábil mes",
+      "periodo_prueba_dias": 30,
+      "capacitacion": "Curso inicial de 1 semana en SQL y Python"
+    }
+  },
+  {
+    "descripción": "Contrato por tiempo indeterminado para puesto de ingeniería.",
+    "datos_trabajador": {
+      "nombre_completo": "Luis Fernando Pérez Jiménez",
+      "nacionalidad": "Mexicana",
+      "edad": 35,
+      "sexo": "Masculino",
+      "estado_civil": "Soltero",
+      "curp": "PEJL850707HDFTRN02",
+      "rfc": "PEJ850707XXX",
+      "domicilio": "Calle Independencia 789, Monterrey, Nuevo León"
+    },
+    "datos_patron": {
+      "razon_social": "Innovatech S. de R.L.",
+      "rfc": "INN870315XXX",
+      "domicilio": "Av. Insurgentes 200, Ciudad de México",
+      "representante_legal": "María Fernanda Torres"
+    },
+    "condiciones_trabajo": {
+      "tipo_contrato": "Indeterminado",
+      "puesto": "Ingeniero DevOps",
+      "funciones": "Implementación de pipelines CI/CD.",
+      "lugar_trabajo": "Híbrido",
+      "jornada_laboral": "Tiempo completo",
+      "horario": "10:00 a 19:00",
+      "salario_mensual": 45000,
+      "forma_pago": "Depósito bancario",
+      "dia_lugar_pago": "Día 5 de cada mes",
+      "periodo_prueba_dias": 45,
+      "capacitacion": "2 semanas de inducción a procesos internos"
+    }
+  }
+]
